@@ -1,0 +1,13 @@
+---
+
+# Generic
+generic:
+  role: ansible-role-aide
+  role_short: aide
+  role_description: |
+    Installs & configures AIDE
+  collections: []
+
+molecule:
+  requirements:
+    roles_extra: []
