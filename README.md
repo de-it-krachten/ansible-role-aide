@@ -13,7 +13,7 @@ Installs & configures AIDE
 None
 
 #### Collections
-- community.general
+None
 
 ## Platforms
 
@@ -44,17 +44,15 @@ Note:
 ## Role Variables
 ### defaults/main.yml
 <pre><code>
-aide_packages:
-  - aide
-
-aide_config: /etc/aide/aide.conf
-
+# Settings
 aide_settings:
   database_in: "file:/var/lib/aide/aide.db"
   database_out: "file:/var/lib/aide/aide.db.new"
 
+# Initialize database
 aide_init_db: false
 
+# Auditd executables
 aide_audit_tools:
   - /usr/sbin/audispd
   - /usr/sbin/auditctl
@@ -63,6 +61,22 @@ aide_audit_tools:
   - /usr/sbin/aureport
   - /usr/sbin/ausearch
   - /usr/sbin/autrace
+</pre></code>
+
+### defaults/family-RedHat.yml
+<pre><code>
+aide_packages:
+  - aide
+
+aide_config: /etc/aide.conf
+</pre></code>
+
+### defaults/family-Debian.yml
+<pre><code>
+aide_packages:
+  - aide
+
+aide_config: /etc/aide/aide.conf
 </pre></code>
 
 

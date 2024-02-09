@@ -1,45 +1,10 @@
 ---
 
-- name: Install AIDE
-  ansible.builtin.package:
-    name: "{{ aide_packages }}"
-    state: present
+- name: Load variables based on OS type
+  ansible.builtin.include_tasks: vars.yml
 
-- name: Set database_in path
-  ansible.builtin.lineinfile:
-    path: "{{ aide_config }}"
-    line: "{{ item.key }}={{ item.value }}"
-    regexp: "^#?(\\s*)({{ item.key }}=)(.*)$"
-    backup: yes
-  loop: "{{ aide_settings | dict2items }}"
+- name: Installation
+  ansible.builtin.include_tasks: install.yml
 
-- name: Ensure existing AIDE configuration for audit tools are correct
-  ansible.builtin.lineinfile:
-    path: "{{ aide_config }}"
-    regexp: "^{{ item }}\\s"
-    line: '{{ item }} p+i+n+u+g+s+b+acl+xattrs+sha512'
-  register: __audit_tools
-  loop: "{{ aide_audit_tools }}"
-
-- name: Initialize AIDE database
-  ansible.builtin.command:
-    cmd: /usr/sbin/aideinit -y -f
-  changed_when: true
-  when: aide_init_db | bool or __audit_tools.changed
-
-- name: Copy the database
-  ansible.builtin.copy:
-    src: /var/lib/aide/aide.db.new
-    dest: /var/lib/aide/aide.db
-    remote_src: yes
-    mode: "0640"
-
-# - name: Configure Periodic Execution of AIDE
-#   ansible.builtin.cron:
-#     name: run AIDE check
-#     minute: '05'
-#     hour: '04'
-#     weekday: '*'
-#     user: root
-#     job: /usr/bin/aide --check
-#     cron_file: /etc/cron.d/aide
+- name: Configuration
+  ansible.builtin.include_tasks: config.yml
