@@ -1,16 +1,14 @@
 ---
 
-aide_packages:
-  - aide
-
-aide_config: /etc/aide/aide.conf
-
+# Settings
 aide_settings:
   database_in: "file:/var/lib/aide/aide.db"
   database_out: "file:/var/lib/aide/aide.db.new"
 
+# Initialize database
 aide_init_db: false
 
+# Auditd executables
 aide_audit_tools:
   - /usr/sbin/audispd
   - /usr/sbin/auditctl

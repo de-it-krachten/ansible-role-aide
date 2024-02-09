@@ -1,0 +1,6 @@
+---
+
+aide_packages:
+  - aide
+
+aide_config: /etc/aide.conf
