@@ -1,0 +1,19 @@
+---
+
+# Settings
+aide_settings:
+  database_in: "file:/var/lib/aide/aide.db"
+  database_out: "file:/var/lib/aide/aide.db.new"
+
+# Initialize database
+aide_init_db: false
+
+# Auditd executables
+aide_audit_tools:
+  - /usr/sbin/audispd
+  - /usr/sbin/auditctl
+  - /usr/sbin/auditd
+  - /usr/sbin/augenrules
+  - /usr/sbin/aureport
+  - /usr/sbin/ausearch
+  - /usr/sbin/autrace
