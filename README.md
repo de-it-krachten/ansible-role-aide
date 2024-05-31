@@ -20,6 +20,7 @@ None
 Supported platforms
 
 - Ubuntu 22.04 LTS
+- Ubuntu 24.04 LTS
 
 Note:
 <sup>1</sup> : no automated testing is performed on these platforms
@@ -46,20 +47,20 @@ aide_audit_tools:
   - /usr/sbin/autrace
 </pre></code>
 
-### defaults/family-RedHat.yml
-<pre><code>
-aide_packages:
-  - aide
-
-aide_config: /etc/aide.conf
-</pre></code>
-
 ### defaults/family-Debian.yml
 <pre><code>
 aide_packages:
   - aide
 
 aide_config: /etc/aide/aide.conf
+</pre></code>
+
+### defaults/family-RedHat.yml
+<pre><code>
+aide_packages:
+  - aide
+
+aide_config: /etc/aide.conf
 </pre></code>
 
 
