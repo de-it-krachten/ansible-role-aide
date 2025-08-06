@@ -19,6 +19,7 @@ None
 
 Supported platforms
 
+- Red Hat Enterprise Linux 10<sup>1</sup>
 - Ubuntu 22.04 LTS
 - Ubuntu 24.04 LTS
 
