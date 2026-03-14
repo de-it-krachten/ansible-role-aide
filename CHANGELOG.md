@@ -1,3 +1,12 @@
+# [1.4.0](https://github.com/de-it-krachten/ansible-role-aide/compare/v1.3.0...v1.4.0) (2026-03-14)
+
+
+### Features
+
+* Removed support for Fedora 43 ([0d59e5d](https://github.com/de-it-krachten/ansible-role-aide/commit/0d59e5de4366e86f912ce4ba18281d5a95885ba6))
+* Removed support for openSUSE Leap 16 ([86ac0f1](https://github.com/de-it-krachten/ansible-role-aide/commit/86ac0f1e15cb7077fbf9572ca4188ef0bd2f817d))
+* Removed support for SUSE Linux Enterprise 16 ([100c5d1](https://github.com/de-it-krachten/ansible-role-aide/commit/100c5d1ac9cdb297cc81f623e8d6b958a1e67b2a))
+
 # [1.3.0](https://github.com/de-it-krachten/ansible-role-aide/compare/v1.2.0...v1.3.0) (2025-08-06)
 
 
