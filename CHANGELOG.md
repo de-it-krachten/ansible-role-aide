@@ -1,3 +1,15 @@
+# [1.5.0](https://github.com/de-it-krachten/ansible-role-aide/compare/v1.4.0...v1.5.0) (2026-07-23)
+
+
+### Bug Fixes
+
+* Standarize vars.yml ([745842c](https://github.com/de-it-krachten/ansible-role-aide/commit/745842ccdd3e1230f6e2a78af0f1a8f7efacd6a3))
+
+
+### Features
+
+* Added support for Ubuntu 26.04 LTS ([4efb81a](https://github.com/de-it-krachten/ansible-role-aide/commit/4efb81a2e9022709614b76fa90f847ab52d3522b))
+
 # [1.4.0](https://github.com/de-it-krachten/ansible-role-aide/compare/v1.3.0...v1.4.0) (2026-03-14)
 
 
