@@ -22,6 +22,7 @@ Supported platforms
 - Red Hat Enterprise Linux 10<sup>1</sup>
 - Ubuntu 22.04 LTS
 - Ubuntu 24.04 LTS
+- Ubuntu 26.04 LTS
 
 Note:
 <sup>1</sup> : no automated testing is performed on these platforms
